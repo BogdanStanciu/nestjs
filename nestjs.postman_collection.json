@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "0702c94f-fb59-4589-9522-bb3d4bcdc28a",
+		"name": "NestJs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTUwZWZjODk1YzU2ZGU3MjViN2RhMzIiLCJ0eXBlIjoiQURNSU4iLCJpYXQiOjE2MzI2OTYyMzUsImV4cCI6MTYzMjc4MjYzNX0.UWX6L6xgZATLebE4XhgEjg4LyHuXaeCgaUmgQb4lF7c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRlZmY1NGE1YjA3ZWU1MDQzMzcwMmYiLCJ0eXBlIjoiQURNSU4iLCJpYXQiOjE2MzI2ODE2MzAsImV4cCI6MTYzMjc2ODAzMH0.bNZt2xrFGucEvQSKdqZ2r6ejmnptbL9SgytY8H1Mq5w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Alberto\", \n    \"surname\": \"Rossi\", \n    \"username\": \"alberto.rossi\", \n    \"type\": \"EMPLOYEE\", \n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin.admin\", \n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRlZmY1NGE1YjA3ZWU1MDQzMzcwMmYiLCJ0eXBlIjoiQURNSU4iLCJpYXQiOjE2MzI2OTI2ODcsImV4cCI6MTYzMjc3OTA4N30.4uXdipciy-XpCFjUPvRwDLZV79cv742Aa0FKieLEQiU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/6150cffb864396ea7d622a94",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"6150cffb864396ea7d622a94"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/package",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTUwZjRlY2E5OGRmYmE1NWUzZWQ3OWYiLCJ0eXBlIjoiQURNSU4iLCJpYXQiOjE2MzI2OTY0ODksImV4cCI6MTYzMjc4Mjg4OX0.ZTpPU6RxGY3GWxwHw5NDbkQcKYv2tktU2ZnLzQVGPv0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/bogdan/Downloads/test_1.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/package",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"package"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/package",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRlZmY1NGE1YjA3ZWU1MDQzMzcwMmYiLCJ0eXBlIjoiQURNSU4iLCJpYXQiOjE2MzI2ODE2MzAsImV4cCI6MTYzMjc2ODAzMH0.bNZt2xrFGucEvQSKdqZ2r6ejmnptbL9SgytY8H1Mq5w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/bogdan/Downloads/etichetta_amazon.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/package",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"package"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

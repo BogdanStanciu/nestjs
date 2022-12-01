@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: nestjs:latest
+    container_name: backend
+    environment:
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRESIN: ${JWT_EXPIRESIN}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      BACKEND_PORT: ${BACKEND_PORT}
+    depends_on:
+      - mongodb
+    ports:
+      - ${BACKEND_PORT}:${BACKEND_PORT}
+    restart: always
+    networks:
+      local_network:
+        aliases:
+          - backend
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    volumes:
+      - mongo-volume:/data/db
+    ports:
+      - 27017:27017
+    restart: always
+    networks:
+      local_network:
+        aliases:
+          - mongo
+
+volumes:
+  mongo-volume:
+
+networks:
+  local_network:
