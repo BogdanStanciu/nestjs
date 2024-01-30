@@ -56,7 +56,8 @@ export class UserService {
    * @returns {Promise<boolean>}
    */
   async delete(id: string): Promise<boolean> {
-    const check = await this.userModel.findByIdAndRemove(id);
+    const check = await this.userModel.deleteOne({id: id});
+    
     return !!check;
   }
 }
